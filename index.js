@@ -18,8 +18,14 @@ require('./sources/database')();
 
 //routes 
 require('./routes/user')(app); //user-routes
+
+//login-route
 const loginRoute = require('./routes/login');
 app.use('/', loginRoute);
+
+//signup route 
+const signupRoute = require('./routes/signup');
+app.use('/',signupRoute);
 
 
 
