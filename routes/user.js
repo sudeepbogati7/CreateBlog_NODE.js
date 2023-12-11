@@ -24,6 +24,10 @@ module.exports = function(app){
         res.render('signup');
     }); 
     
+
+    app.get('/welcome' ,(req, res)=>{
+        res.render('startup');
+    })
     
     app.get('/home', (req, res)=>{
         try{

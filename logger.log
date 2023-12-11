@@ -4,6 +4,12 @@
 {"level":"info","message":"Successfully connected to mongoDB ...."}
 {"level":"info","message":"listening to port 3000....."}
 {"level":"info","message":"Successfully connected to mongoDB ...."}
+{"code":"ERR_HTTP_HEADERS_SENT","level":"error","message":"Internal Server Error :  Cannot set headers after they are sent to the client","stack":"Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client\n    at new NodeError (node:internal/errors:406:5)\n    at ServerResponse.setHeader (node:_http_outgoing:652:11)\n    at ServerResponse.header (/home/sudeep/Documents/Web/Auth_Project/node_modules/express/lib/response.js:794:10)\n    at ServerResponse.send (/home/sudeep/Documents/Web/Auth_Project/node_modules/express/lib/response.js:174:12)\n    at ServerResponse.json (/home/sudeep/Documents/Web/Auth_Project/node_modules/express/lib/response.js:278:15)\n    at /home/sudeep/Documents/Web/Auth_Project/routes/signup.js:27:32\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)"}
+{"code":"ERR_HTTP_HEADERS_SENT","level":"error","message":"Unhandled Rejection :  Cannot set headers after they are sent to the client","stack":"Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client\n    at new NodeError (node:internal/errors:406:5)\n    at ServerResponse.setHeader (node:_http_outgoing:652:11)\n    at ServerResponse.header (/home/sudeep/Documents/Web/Auth_Project/node_modules/express/lib/response.js:794:10)\n    at ServerResponse.send (/home/sudeep/Documents/Web/Auth_Project/node_modules/express/lib/response.js:174:12)\n    at ServerResponse.json (/home/sudeep/Documents/Web/Auth_Project/node_modules/express/lib/response.js:278:15)\n    at /home/sudeep/Documents/Web/Auth_Project/routes/signup.js:34:32\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)"}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"error","message":"Internal Server Error : "}
+{"code":"ERR_HTTP_HEADERS_SENT","level":"error","message":"Unhandled Rejection :  Cannot set headers after they are sent to the client","stack":"Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client\n    at new NodeError (node:internal/errors:406:5)\n    at ServerResponse.setHeader (node:_http_outgoing:652:11)\n    at ServerResponse.header (/home/sudeep/Documents/Web/Auth_Project/node_modules/express/lib/response.js:794:10)\n    at ServerResponse.send (/home/sudeep/Documents/Web/Auth_Project/node_modules/express/lib/response.js:174:12)\n    at ServerResponse.json (/home/sudeep/Documents/Web/Auth_Project/node_modules/express/lib/response.js:278:15)\n    at /home/sudeep/Documents/Web/Auth_Project/routes/signup.js:34:32\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)"}
 {"level":"info","message":"listening to port 3000....."}
 {"level":"info","message":"Successfully connected to mongoDB ...."}
 {"level":"info","message":"listening to port 3000....."}
@@ -48,6 +54,10 @@
 {"level":"info","message":"Successfully connected to mongoDB ...."}
 {"level":"info","message":"listening to port 3000....."}
 {"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"error","message":"Internal Server Error : "}
+{"code":"ERR_HTTP_HEADERS_SENT","level":"error","message":"Unhandled Rejection :  Cannot set headers after they are sent to the client","stack":"Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client\n    at new NodeError (node:internal/errors:406:5)\n    at ServerResponse.setHeader (node:_http_outgoing:652:11)\n    at ServerResponse.header (/home/sudeep/Documents/Web/Auth_Project/node_modules/express/lib/response.js:794:10)\n    at ServerResponse.send (/home/sudeep/Documents/Web/Auth_Project/node_modules/express/lib/response.js:174:12)\n    at ServerResponse.json (/home/sudeep/Documents/Web/Auth_Project/node_modules/express/lib/response.js:278:15)\n    at /home/sudeep/Documents/Web/Auth_Project/routes/signup.js:36:32\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)"}
+{"level":"error","message":"Internal Server Error : "}
+{"code":"ERR_HTTP_HEADERS_SENT","level":"error","message":"Unhandled Rejection :  Cannot set headers after they are sent to the client","stack":"Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client\n    at new NodeError (node:internal/errors:406:5)\n    at ServerResponse.setHeader (node:_http_outgoing:652:11)\n    at ServerResponse.header (/home/sudeep/Documents/Web/Auth_Project/node_modules/express/lib/response.js:794:10)\n    at ServerResponse.send (/home/sudeep/Documents/Web/Auth_Project/node_modules/express/lib/response.js:174:12)\n    at ServerResponse.json (/home/sudeep/Documents/Web/Auth_Project/node_modules/express/lib/response.js:278:15)\n    at /home/sudeep/Documents/Web/Auth_Project/routes/signup.js:36:32\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)"}
 {"level":"info","message":"listening to port 3000....."}
 {"level":"info","message":"Successfully connected to mongoDB ...."}
 {"level":"info","message":"listening to port 3000....."}
@@ -72,53 +82,6 @@
 {"level":"info","message":"Successfully connected to mongoDB ...."}
 {"level":"info","message":"listening to port 3000....."}
 {"level":"info","message":"Successfully connected to mongoDB ...."}
-{"level":"info","message":"listening to port 3000....."}
-{"level":"info","message":"Successfully connected to mongoDB ...."}
-{"level":"info","message":"listening to port 3000....."}
-{"level":"info","message":"Successfully connected to mongoDB ...."}
-{"level":"info","message":"listening to port 3000....."}
-{"level":"info","message":"Successfully connected to mongoDB ...."}
-{"level":"info","message":"listening to port 3000....."}
-{"level":"info","message":"Successfully connected to mongoDB ...."}
-{"level":"info","message":"listening to port 3000....."}
-{"level":"info","message":"Successfully connected to mongoDB ...."}
-{"level":"info","message":"listening to port 3000....."}
-{"level":"info","message":"Successfully connected to mongoDB ...."}
-{"level":"info","message":"listening to port 3000....."}
-{"level":"info","message":"Successfully connected to mongoDB ...."}
-{"level":"info","message":"listening to port 3000....."}
-{"level":"info","message":"Successfully connected to mongoDB ...."}
-{"level":"info","message":"listening to port 3000....."}
-{"level":"info","message":"Successfully connected to mongoDB ...."}
-{"level":"info","message":"listening to port 3000....."}
-{"level":"info","message":"Successfully connected to mongoDB ...."}
-{"level":"info","message":"listening to port 3000....."}
-{"level":"info","message":"Successfully connected to mongoDB ...."}
-{"level":"info","message":"listening to port 3000....."}
-{"level":"info","message":"Successfully connected to mongoDB ...."}
-{"level":"info","message":"listening to port 3000....."}
-{"level":"info","message":"Successfully connected to mongoDB ...."}
-{"level":"info","message":"listening to port 3000....."}
-{"level":"info","message":"Successfully connected to mongoDB ...."}
-{"level":"info","message":"listening to port 3000....."}
-{"level":"info","message":"Successfully connected to mongoDB ...."}
-{"level":"info","message":"listening to port 3000....."}
-{"level":"info","message":"Successfully connected to mongoDB ...."}
-{"level":"info","message":"listening to port 3000....."}
-{"level":"info","message":"Successfully connected to mongoDB ...."}
-{"level":"info","message":"listening to port 3000....."}
-{"level":"info","message":"Successfully connected to mongoDB ...."}
-{"level":"info","message":"listening to port 3000....."}
-{"level":"info","message":"Successfully connected to mongoDB ...."}
-{"level":"info","message":"listening to port 3000....."}
-{"level":"info","message":"Successfully connected to mongoDB ...."}
-{"level":"info","message":"listening to port 3000....."}
-{"level":"info","message":"Successfully connected to mongoDB ...."}
-{"level":"info","message":"listening to port 3000....."}
-{"level":"info","message":"Successfully connected to mongoDB ...."}
-{"level":"info","message":"listening to port 3000....."}
-{"level":"info","message":"Successfully connected to mongoDB ...."}
-{"level":"error","message":"Internal Server Error :  _ is not defined","stack":"ReferenceError: _ is not defined\n    at /home/sudeep/Documents/Web/Auth_Project/routes/signup.js:17:25\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)"}
 {"level":"info","message":"listening to port 3000....."}
 {"level":"info","message":"Successfully connected to mongoDB ...."}
 {"level":"info","message":"listening to port 3000....."}

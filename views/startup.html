@@ -12,8 +12,11 @@
     <title>Home</title>
   </head>
   <body>
+
+    <!-- ===============nav bar start ======================================== -->
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="/">MyNotes</a>
+      <a class="navbar-brand" href="/">MyBlog</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -29,7 +32,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href=""
+            <a class="nav-link" href="/"
               >Home <span class="sr-only">(current)</span></a
             >
           </li>
@@ -55,8 +58,8 @@
     </nav>
     <!--================================================ nav end ========================================================== -->
     <div class="container">
-      <h1 class="my-4">Add a new note</h1>
-      <form>
+      <h1 class="my-4">Add a blog</h1>
+      <div>
         <div class="form-group mb-3">
           <label for="title">Title</label>
           <input
@@ -67,25 +70,42 @@
             placeholder="Title"
           />
           <small id="titleHelp" class="form-text text-muted"
-            >Try to add a catchy title.</small
-          >
+            >Try to add a catchy title.</small>
         </div>
         <div class="form-group mb-3">
           <label for="desc">Description</label>
-          <textarea
-            type="text"
-            class="form-control"
-            id="desc"
-            placeholder="Description"
-          >
-          </textarea>
+          <textarea class="form-control" id="desc" placeholder="Describe your blog ....."></textarea>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
+        <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+      </div>
 
-      <h1 class="text-center my-4">Your Notes</h1>
+      <h1 class="text-center my-4">Your Blogs</h1>
 
       <div class="mynotes my-2 row">
+        <div class="card mx-4 my-2" style="width: 18rem">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+          </div>
+        </div>
+        <div class="card mx-4 my-2" style="width: 18rem">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+          </div>
+        </div>
         <div class="card mx-4 my-2" style="width: 18rem">
           <div class="card-body">
             <h5 class="card-title">Card title</h5>
@@ -144,7 +164,40 @@
     <!-- ------------------------- My Script ------------------------------------- -->
 
     <script>
+      async function postData(url= '' ,data= {}){
+        const response = await fetch(url , {
+          method : 'POST', 
+          headers : {
+            'Content-Type' : 'application/json'
+          },
+          body : JSON.stringify(data)
+        });
+        return response.json()
+      }
+      // fetch all the notes 
+      const user = JSON.parse(localStorage.getItem('user'));
+      // TODO : Enable this for redirection to login page and token 
+
+
+      // if(!user || !user.token){
+      //   window.location = '/login'
+      // }
+      // const notes = postData('/getnotes', {token : user.token});
+      // notes.then((notes) => {
+      //   console.log("Notes");
+      //   // populate ntoes
+      // })
+
+
+      // adding notes 
+      let submit = document.getElementById("submit");
       
+      submit.addEventListener('click', () =>{
+        let title = document.getElementById("title").value;
+        let desc = document.getElementById("desc").value;
+        console.log("Submitting your blog ..........", title, desc);
+      });
+
     </script>
 
 

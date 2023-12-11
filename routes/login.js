@@ -15,7 +15,7 @@ router.post('/login',async(req, res) => {
     try{
         const {err} = validateUser(req.body);
         if(err) return res.status(400).send(error.details[0].message);
-    
+
         const user = await User.findOne({ email });
         if(!user || !(await bcrypt.compare(password, user.password))){
             return res.status(401).json({error : "Invalid Email or password !"});
@@ -24,12 +24,15 @@ router.post('/login',async(req, res) => {
         //generate JWT token 
         const token = jwt.sign({userId: user._id}, process.env.JWT_SECRET, {expiresIn : '1h'});
 
-        res.send({token});
+        // res.json({token});
+        res.redirect(`/home?username=${user.username}&email=${user.email}&key=${token}`);
     }catch(err){
         console.log("Internal server error : ", err);
         winston.error("internal Server Error ", err);
         res.status(500).send("Internal server error ");
     }
 });
+
+
 
 module.exports = router;

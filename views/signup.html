@@ -1,35 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Signup</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div class="container">
-        <h2>Sign up </h2>
-        <form action="/signup" method="post">
-            <div class="text-field">
-                <input type="text" name="username" required>
-                <span></span>
-                <label>Username</label>
-            </div>
-            <div class="text-field">
-                <input type="email" name="email" required>
-                <span></span>
-                <label>Email</label>
-            </div>
-            <div class="text-field">
-                <input type="password" name="password" required>
-                <span></span>
-                <label>Password</label>
-            </div>
-            <input type="submit" value="Signup">
-            <div class="signup-link">
-               Already signed in? <a href="/login"> Login</a>
-            </div>
-        </form>
+      <h2>Sign up</h2>
+      <form action="/signup" method="post" id="signupId">
+        <div class="text-field">
+          <input type="text" name="username" id="username" required />
+          <span></span>
+          <label>Username</label>
+        </div>
+        <div class="text-field">
+          <input type="email" name="email" id="email" required />
+          <span></span>
+          <label>Email</label>
+        </div>
+        <div class="text-field">
+          <input type="password" name="password" id="password" required />
+          <span></span>
+          <label>Password</label>
+        </div>
+        <input type="submit" id="submit" value="Signup" />
+        <div class="signup-link">
+          Already signed in? <a href="/login"> Login</a>
+        </div>
+      </form>
     </div>
-</body>
+
+    <script>
+        document.getElementById("signupId").addEventListener("submit", async function (event) {
+            event.preventDefault();
+            
+            const data = {
+                username : document.getElementById("username").value,
+                email : document.getElementById("email").value,
+                password : document.getElementById("password").value
+            };
+
+            try {
+                const response = await fetch('/signup', {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(data),
+                });
+                const result = await response.json();
+                console.log(result);
+                if(response.ok) {
+                    // alert(`Registration successful ! You can now login with email: ${result.email}`);
+                    window.location.href = `/home?username=${result.username}&email=${result.email}`;
+                }else
+                    alert(`Error: ${result.error}`);
+            } catch (err) {
+                console.log(err);
+                alert("Internal Error , Please try again letter ...");
+            }
+        });
+    </script>
+    
+  </body>
 </html>
