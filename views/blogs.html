@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+
+    <title>Home</title>
+  </head>
+  <body>
+    <!-- ===============nav bar start ======================================== -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="/">MyBlog</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href=""
+              >About <span class="sr-only">(current)</span></a
+            >
+          </li>
+        </ul>
+        <div class="form-inline my-2 my-lg-0">
+          <a href="/login"
+            ><button class="btn btn-primary my-2 my-sm-0 mx-2" type="submit">
+              Login
+            </button></a
+          >
+          <a href="/signup"
+            ><button class="btn btn-primary my-2 my-sm-0 mx-2" type="submit">
+              SignUp
+            </button></a
+          >
+        </div>
+      </div>
+    </nav>
+    <!--================================================ nav end ========================================================== -->
+    <div id="blog-container" class="container">
+      <h1 class="my-4">Add a blog</h1>
+
+      <form action="addblog" method="post" id="newBlog">
+        <div class="form-group mb-3">
+          <label for="title">Title</label>
+          <input
+            type="text"
+            class="form-control"
+            id="title"
+            aria-describedby="titleHelp"
+            placeholder="Title"
+          />
+          <small id="titleHelp" class="form-text text-muted"
+            >Try to add a catchy title.</small
+          >
+        </div>
+        <div class="form-group mb-3">
+          <label for="desc">Description</label>
+          <textarea
+            class="form-control"
+            id="desc"
+            placeholder="Describe your blog ....."
+          ></textarea>
+        </div>
+        <button
+          type="submit"
+          id="submit"
+          class="btn btn-primary">
+          Submit
+        </button>
+      </form>
+      <!--========================================================================================================== -->
+
+      <h1 class="text-center my-4">Your Blogs</h1>
+
+      <div class="card mx-4 my-2" id="blogList" style="width: 18rem">
+        <div class="card-body">
+          <h4 class="card-title">My First Blog</h4>
+          <p class="card-text">
+            Hello everyone this is my first blog. I am Sudeep Bogati from
+            Kathmandu . Currently I 'm persuing my graduation in BIT and am a
+            extreme machine learning enthusiast.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.9/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <!-- ------------------------- My Script ------------------------------------- -->
+
+   <!-- Add these scripts at the end of your HTML body -->
+
+<!-- Fetch and display existing blog posts when the page loads -->
+<script>
+  document.addEventListener("DOMContentLoaded", async () => {
+    try {
+      const response = await fetch("/add-blog", {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": "Bearer " + localStorage.getItem("token"),
+        },
+      });
+      const result = await response.json();
+
+      // Display existing blog posts
+      const blogListContainer = document.getElementById("blogList");
+      updateBlogList(result.blog, blogListContainer);
+    } catch (error) {
+      console.error("Error fetching blog posts:", error);
+    }
+  });
+
+  // Function to update the blog list in the HTML
+  function updateBlogList(blogPosts, container) {
+    // Clear the existing content
+    container.innerHTML = "";
+
+    // Check if there are any blog posts
+    if (blogPosts && blogPosts.length > 0) {
+      // Loop through the blog posts and create HTML elements
+      blogPosts.forEach(blog => {
+        const card = document.createElement("div");
+        card.className = "card mx-4 my-2";
+        card.style.width = "18rem";
+
+        const cardBody = document.createElement("div");
+        cardBody.className = "card-body";
+
+        const title = document.createElement("h4");
+        title.className = "card-title";
+        title.innerText = blog.title;
+
+        const desc = document.createElement("p");
+        desc.className = "card-text";
+        desc.innerText = blog.desc;
+
+        // Append elements to the card body
+        cardBody.appendChild(title);
+        cardBody.appendChild(desc);
+
+        // Append the card body to the card
+        card.appendChild(cardBody);
+
+        // Append the card to the blog list container
+        container.appendChild(card);
+      });
+    } else {
+      // Display a message if there are no blog posts
+      container.innerHTML = "<p>No blog posts available.</p>";
+    }
+  }
+
+  // Event listener for the new blog form
+  const blogForm = document.getElementById("newBlog");
+  blogForm.addEventListener("submit", async function (event) {
+    event.preventDefault();
+    const title = document.getElementById("title").value;
+    const desc = document.getElementById("desc").value;
+
+    if (!title || !desc) {
+      alert("Title and description are required!");
+      return;
+    }
+
+    const token = localStorage.getItem("token");
+    if (!token) {
+      alert("Please login first!");
+      return;
+    }
+
+    const data = { title, desc };
+
+    try {
+      const response = await fetch("/add-blog", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "token":  token,
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+      if (response.ok) {
+        alert("Added a new blog");
+        // Clear the form fields
+        document.getElementById("title").value = "";
+        document.getElementById("desc").value = "";
+
+        // Add the new blog dynamically
+        addBlog(result.blog);
+      } else {
+        alert(`Error: ${result.error}`);
+      }
+    } catch (err) {
+      console.log(err);
+      alert("Internal Error, Please try again later...");
+    }
+  });
+
+  // Function to add a new blog dynamically
+  function addBlog(blog) {
+    const container = document.getElementById("blogList");
+
+    const card = document.createElement("div");
+    card.className = "card mx-4 my-2";
+    card.style.width = "18rem";
+
+    const cardBody = document.createElement("div");
+    cardBody.className = "card-body";
+
+    const title = document.createElement("h4");
+    title.className = "card-title";
+    title.innerText = blog.title;
+
+    const desc = document.createElement("p");
+    desc.className = "card-text";
+    desc.innerText = blog.desc;
+
+    // Append elements to the card body
+    cardBody.appendChild(title);
+    cardBody.appendChild(desc);
+
+    // Append the card body to the card
+    card.appendChild(cardBody);
+
+    // Append the card to the blog list container
+    container.appendChild(card);
+  }
+</script>
+
+  </body>
+</html>

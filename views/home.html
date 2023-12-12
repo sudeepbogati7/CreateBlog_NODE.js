@@ -1,1 +1,210 @@
-<h1>Congrats ! you have been logged as <%= username %> from <%= email %> ..........</h1>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+
+    <title>Home</title>
+  </head>
+  <body>
+    <!-- ===============nav bar start ======================================== -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="/">MyBlog</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href=""
+              >About <span class="sr-only">(current)</span></a
+            >
+          </li>
+        </ul>
+        <div class="form-inline my-2 my-lg-0">
+          <a href="/login"
+            ><button class="btn btn-primary my-2 my-sm-0 mx-2" type="submit">
+              Login
+            </button></a
+          >
+          <a href="/signup"
+            ><button class="btn btn-primary my-2 my-sm-0 mx-2" type="submit">
+              SignUp
+            </button></a
+          >
+        </div>
+      </div>
+    </nav>
+    <!--================================================ nav end ========================================================== -->
+    <div class="container">
+      <h1 class="my-4">Add a blog</h1>
+
+      <form action="addblog" method="post" id="newBlog">
+        <div class="form-group mb-3">
+          <label for="title">Title</label>
+          <input
+            type="text"
+            class="form-control"
+            id="title"
+            aria-describedby="titleHelp"
+            placeholder="Title"
+          />
+          <small id="titleHelp" class="form-text text-muted"
+            >Try to add a catchy title.</small
+          >
+        </div>
+        <div class="form-group mb-3">
+          <label for="desc">Description</label>
+          <textarea
+            class="form-control"
+            id="desc"
+            placeholder="Describe your blog ....."
+          ></textarea>
+        </div>
+        <button type="submit" id="submit" class="btn btn-primary">
+          Submit
+        </button>
+      </form>
+    <!--========================================================================================================== -->
+
+      <h1 class="text-center my-4">Your Blogs</h1>
+
+      <div class="mynotes my-2 row">
+        <div class="card mx-4 my-2" style="width: 18rem">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+          </div>
+        </div>
+        <div class="card mx-4 my-2" style="width: 18rem">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+          </div>
+        </div>
+        <div class="card mx-4 my-2" style="width: 18rem">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+          </div>
+        </div>
+        <div class="card mx-4 my-2" style="width: 18rem">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+          </div>
+        </div>
+        <div class="card mx-4 my-2" style="width: 18rem">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+          </div>
+        </div>
+        <div class="card mx-4 my-2" style="width: 18rem">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.9/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <!-- ------------------------- My Script ------------------------------------- -->
+
+    <script>
+      document
+        .getElementById("newBlog")
+        .addEventListener("submit", async function (event) {
+          event.preventDefault();
+          const token = localStorage.getItem('token');
+          if(!token){
+            alert("Please login first! ");
+            return;
+          }
+          const data = {
+            title: document.getElementById("title").value,
+            desc: document.getElementById("desc").value
+          };
+
+          try {
+            const response = await fetch("/add-blog", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                "token" : token
+              },
+              body: JSON.stringify(data),
+            });
+            const result = await response.json();
+            console.log(result);
+            if (response.ok) {
+              alert(`added a new blog`);
+              // window.location.href = `/home?username=${result.username}&email=${result.email}`;
+            } else alert(`Error: ${result.error}`);
+          } catch (err) {
+            console.log(err);
+            alert("Internal Error , Please try again letter ...");
+          }
+        });
+    </script>
+  </body>
+</html>

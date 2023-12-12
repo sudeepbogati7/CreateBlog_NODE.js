@@ -11,23 +11,20 @@ module.exports = function(app){
         res.render('login');
     });
     
-    app.get('/', (req, res) =>{
-        res.render('startup');
-    });
-
-
-    app.get('/' ,(req, res) => {
-        res.redirect('/startup');
-    });
-
     app.get('/signup',(req, res)=>{
         res.render('signup');
     }); 
     
+    app.get('/', (req, res) =>{
+        res.render('blogs');
+    });
 
-    app.get('/welcome' ,(req, res)=>{
-        res.render('startup');
-    })
+
+    // app.get('/' ,(req, res) => {
+    //     res.redirect('/blogs');
+    // });
+
+
     
     app.get('/home', (req, res)=>{
         try{

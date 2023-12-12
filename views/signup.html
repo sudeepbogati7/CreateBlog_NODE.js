@@ -53,8 +53,8 @@
                 const result = await response.json();
                 console.log(result);
                 if(response.ok) {
-                    // alert(`Registration successful ! You can now login with email: ${result.email}`);
-                    window.location.href = `/home?username=${result.username}&email=${result.email}`;
+                    alert(`Registration successful ! You can now login... `);
+                    window.location.href = `/login`;
                 }else
                     alert(`Error: ${result.error}`);
             } catch (err) {

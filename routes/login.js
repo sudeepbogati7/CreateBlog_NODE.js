@@ -3,7 +3,7 @@ const app = express();
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 
-const {User, validateUser} = require('../models/user');
+const {User} = require('../models/user');
 const winston = require('winston/lib/winston/config');
 
 const router = express.Router();
@@ -13,19 +13,21 @@ router.post('/login',async(req, res) => {
     const { email , password } = req.body;
     
     try{
-        const {err} = validateUser(req.body);
-        if(err) return res.status(400).send(error.details[0].message);
-
-        const user = await User.findOne({ email });
+        const user = await User.findOne({ email }).select('-username');
         if(!user || !(await bcrypt.compare(password, user.password))){
-            return res.status(401).json({error : "Invalid Email or password !"});
+            return res.status(401).json({error : "Invalid email Or password! ", message: "Invalid Email or password ! "});
         }
     
         //generate JWT token 
-        const token = jwt.sign({userId: user._id}, process.env.JWT_SECRET, {expiresIn : '1h'});
+        const token = user.generateAuthToken();
 
         // res.json({token});
-        res.redirect(`/home?username=${user.username}&email=${user.email}&key=${token}`);
+       return res.status(200).json({
+            Auth_token : token,
+            success : true, 
+            user : { email : user.email},
+            message : "Sucessfully LoggedIn"
+       });
     }catch(err){
         console.log("Internal server error : ", err);
         winston.error("internal Server Error ", err);

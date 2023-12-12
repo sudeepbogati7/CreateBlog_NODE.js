@@ -1,0 +1,3 @@
+{
+    "JWT_SECRET" : "MY_JWT_SECRET"
+}

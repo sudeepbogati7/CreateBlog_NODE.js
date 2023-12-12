@@ -27,9 +27,14 @@ app.use('/', loginRoute);
 const signupRoute = require('./routes/signup');
 app.use('/',signupRoute);
 
+//blogs-route
+const blogsRoute = require('./routes/blog');
+app.use('/', blogsRoute);
 
 
-
+//authentication token varify(middleware)
+const varifyToken = require('./middlewares/auth');
+app.use('/',varifyToken);
 
 require('./sources/log_file')(); //logger.log
 app.listen(port, ()=>{

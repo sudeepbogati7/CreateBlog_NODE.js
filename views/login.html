@@ -1,32 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Welcome</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="toast.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="toast.css" />
+  </head>
+  <body>
     <!-- Nav bar -->
     <div class="container">
-        <h2>Login </h2>
-        <form id="loginForm" action="login" method="post">
-            <div class="text-field">
-                <input type="text" name="email" required>
-                <span></span>
-                <label>Email</label>
-            </div>
-            <div class="text-field">
-                <input type="password" name="password" required>
-                <span></span>
-                <label>Password</label>
-            </div>
-            <input type="submit" value="Login">
-            <div class="signup-link">
-                Don't have account yet? <a href="/signup"> Signup</a>
-            </div>
-        </form>
+      <h2>Login</h2>
+      <form id="loginForm" action="login" method="post">
+        <div class="text-field">
+          <input type="text" id="email" name="email" required />
+          <span></span>
+          <label>Email</label>
+        </div>
+        <div class="text-field">
+          <input type="password" id="password" name="password" required />
+          <span></span>
+          <label>Password</label>
+        </div>
+        <input type="submit" value="Login" />
+        <div class="signup-link">
+          Don't have account yet? <a href="/signup"> Signup</a>
+        </div>
+      </form>
     </div>
-</body>
+
+    <script>
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", async function (event) {
+          event.preventDefault();
+
+          const data = {
+            email: document.getElementById("email").value,
+            password: document.getElementById("password").value,
+          };
+
+          try {
+            const response = await fetch("/login", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(data),
+            });
+            const result = await response.json();
+            console.log(result);
+            if (response.ok) {
+              alert(`Login successfull! you can post a blog now...`);
+              window.location.href = `/add-blog`;
+              localStorage.setItem('token', result.Auth_token);
+            } else alert(`Error: ${result.error}`);
+          } catch (err) {
+            console.log(err);
+            alert("Internal Error , Please try again letter ...");
+          }
+        });
+    </script>
+  </body>
 </html>
