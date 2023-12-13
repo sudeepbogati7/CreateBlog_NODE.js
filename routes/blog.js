@@ -2,28 +2,23 @@ const express = require("express");
 const router = express.Router();
 const { Blog } = require("../models/blogs");
 const verifyToken = require("../middlewares/auth");
-const app = express();
 
-router.get("/add-blog", (req, res) => {
-  res.render("blogs");
-});
+router.get("/add-blog",  async (req, res) => {
+  try {
+    const blogPosts = await Blog.find();
 
-router.get("/add-blog", async (req, res) => {
-  try{
-      const userEmail = req.user ? req.user.email : null;
-      const blogPosts = await Blog.find({ user: userEmail });
-      if (req.headers.accept && req.headers.accept.includes("application/json")) {
-          // Return JSON data if the client accepts JSON
-          res.json({ blogPosts });
-      } else {
-          // Otherwise, render the HTML page
-          res.render("blogs", { blogPosts });
-      }
-  }catch(ex) {
+    // If the client accepts JSON, return JSON data
+    if (req.headers.accept && req.headers.accept.includes("application/json")) {
+      // console.log(res.json({ blogPosts }));
+      return res.json({ blogPosts });
+    } else {
+      // Otherwise, render the HTML page with the blog data
+      res.render("blogs", { blogPosts });
+    }
+  } catch (ex) {
     console.log(ex);
-    res.status(500).json({error : "Internal Server Error !"});
+    res.status(500).json({ error: "Internal Server Error!" });
   }
-
 });
 
 router.post("/add-blog", verifyToken, async (req, res) => {
@@ -32,18 +27,18 @@ router.post("/add-blog", verifyToken, async (req, res) => {
     if (!title || !desc)
       return res
         .status(400)
-        .json({ error: "Title and description are required ! " });
+        .json({ error: "Title and description are required!" });
 
-    const newBlog = new Blog({ title, desc, user : req.user._id });
+    const newBlog = new Blog({ title, desc, user: req.user._id });
     await newBlog.save();
 
-    //returning success response
+    // Returning success response
     return res
       .status(200)
-      .json({ success: true, blog: newBlog, message: "Successfully added !" });
+      .json({ success: true, blog: newBlog, message: "Successfully added!" });
   } catch (error) {
     console.log(error);
-    return res.status(500).json({ error: "Internal server Error !! " });
+    return res.status(500).json({ error: "Internal server Error!" });
   }
 });
 

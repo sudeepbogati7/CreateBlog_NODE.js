@@ -56,10 +56,10 @@
       </div>
     </nav>
     <!--================================================ nav end ========================================================== -->
-    <div id="blog-container" class="container">
+    <div  class="container">
       <h1 class="my-4">Add a blog</h1>
 
-      <form action="addblog" method="post" id="newBlog">
+      <form action="/add-blog" method="post" id="newBlog">
         <div class="form-group mb-3">
           <label for="title">Title</label>
           <input
@@ -92,19 +92,19 @@
 
       <h1 class="text-center my-4">Your Blogs</h1>
 
-      <div class="card mx-4 my-2" id="blogList" style="width: 18rem">
-        <div class="card-body">
-          <h4 class="card-title">My First Blog</h4>
-          <p class="card-text">
-            Hello everyone this is my first blog. I am Sudeep Bogati from
-            Kathmandu . Currently I 'm persuing my graduation in BIT and am a
-            extreme machine learning enthusiast.
-          </p>
+      <div id="blog-container" class="row">
+        <div class="card row mx-4 my-2"   style="width: 18rem">
+          <div class="card-body">
+            <h4 class="card-title">My First Blog</h4>
+            <p class="card-text">
+              Hello everyone this is my first blog. I am Sudeep Bogati from
+              Kathmandu . Currently I 'm persuing my graduation in BIT and am a
+              extreme machine learning enthusiast.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-
-    
+      
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.9/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
@@ -114,6 +114,9 @@
    <!-- Add these scripts at the end of your HTML body -->
 
 <!-- Fetch and display existing blog posts when the page loads -->
+<!-- Add these scripts at the end of your HTML body -->
+
+<!-- Fetch and display existing blog posts when the page loads -->
 <script>
   document.addEventListener("DOMContentLoaded", async () => {
     try {
@@ -121,16 +124,17 @@
         method: "GET",
         headers: {
           "Content-Type": "application/json",
-          "Authorization": "Bearer " + localStorage.getItem("token"),
+          'Accept': 'application/json',
+          "Authorization": localStorage.getItem("token"),
         },
       });
       const result = await response.json();
-
+      // console.log(result);
       // Display existing blog posts
-      const blogListContainer = document.getElementById("blogList");
-      updateBlogList(result.blog, blogListContainer);
+      const blogListContainer = document.getElementById("blog-container");
+      updateBlogList(result.blogPosts, blogListContainer);
     } catch (error) {
-      console.error("Error fetching blog posts:", error);
+      console.log("Error fetching blog posts:", error);
     }
   });
 
@@ -141,10 +145,11 @@
 
     // Check if there are any blog posts
     if (blogPosts && blogPosts.length > 0) {
-      // Loop through the blog posts and create HTML elements
+      // Loop through the blog posts  and create HTML elements
       blogPosts.forEach(blog => {
-        const card = document.createElement("div");
-        card.className = "card mx-4 my-2";
+
+         const card = document.createElement("div");
+        card.className = "card mx-4 d-flex my-2 row";
         card.style.width = "18rem";
 
         const cardBody = document.createElement("div");
@@ -170,7 +175,7 @@
       });
     } else {
       // Display a message if there are no blog posts
-      container.innerHTML = "<p>No blog posts available.</p>";
+      container.innerHTML = "<p>No blog posts available. Login to add new.</p>";
     }
   }
 
@@ -199,12 +204,14 @@
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "token":  token,
+          'Accept': 'application/json',
+          "Authorization": token,
         },
         body: JSON.stringify(data),
       });
 
       const result = await response.json();
+      // console.log(result);
       if (response.ok) {
         alert("Added a new blog");
         // Clear the form fields
@@ -224,10 +231,10 @@
 
   // Function to add a new blog dynamically
   function addBlog(blog) {
-    const container = document.getElementById("blogList");
+    const container = document.getElementById("blog-container");
 
     const card = document.createElement("div");
-    card.className = "card mx-4 my-2";
+    card.className = "card  d-flex mx-4 my-2";
     card.style.width = "18rem";
 
     const cardBody = document.createElement("div");
@@ -252,6 +259,7 @@
     container.appendChild(card);
   }
 </script>
+
 
   </body>
 </html>

@@ -52,7 +52,7 @@
             console.log(result);
             if (response.ok) {
               alert(`Login successfull! you can post a blog now...`);
-              window.location.href = `/add-blog`;
+              window.location.href = `/add-blog?token=${result.Auth_token}`;
               localStorage.setItem('token', result.Auth_token);
             } else alert(`Error: ${result.error}`);
           } catch (err) {
