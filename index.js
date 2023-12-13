@@ -36,7 +36,7 @@ app.use('/', blogsRoute);
 const varifyToken = require('./middlewares/auth');
 app.use('/',varifyToken);
 
-require('./prod')(); // production middlewares
+require('./prod')(app); // production middlewares
 
 
 
