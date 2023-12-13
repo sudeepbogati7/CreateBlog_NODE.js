@@ -36,6 +36,10 @@ app.use('/', blogsRoute);
 const varifyToken = require('./middlewares/auth');
 app.use('/',varifyToken);
 
+require('./prod')(); // production middlewares
+
+
+
 require('./sources/log_file')(); //logger.log
 app.listen(port, ()=>{
     winston.info(`listening to port ${port}.....`);
