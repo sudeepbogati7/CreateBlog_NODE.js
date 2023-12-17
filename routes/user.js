@@ -15,26 +15,20 @@ module.exports = function(app){
         res.render('signup');
     }); 
     
-    app.get('/', (req, res) =>{
-        res.render('blogs');
+
+
+    app.get('/' ,(req, res) => {
+        res.redirect('/home');
     });
-
-
-    // app.get('/' ,(req, res) => {
-    //     res.redirect('/blogs');
-    // });
 
 
     
     app.get('/home', (req, res)=>{
-        try{
-            const username = req.query.username;
-            const email = req.query.email;
-            res.render('home',{username , email});
-        }catch(err){
-            console.error(err);
-            res.status(500).json({err : 'Internal Server Error'});
-        }
+        res.render('home');
+    });
+
+    app.get('/blogs', (req, res)=>{
+        res.render('blogs');
     });
 }
 

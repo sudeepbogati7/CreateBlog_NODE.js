@@ -174,3 +174,448 @@
 {"level":"info","message":"Successfully connected to mongoDB ...."}
 {"level":"info","message":"listening to port 3000....."}
 {"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"error","message":"Failed to connect to DB --- The `uri` parameter to `openUri()` must be a string, got \"undefined\". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.","stack":"MongooseError: The `uri` parameter to `openUri()` must be a string, got \"undefined\". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.\n    at NativeConnection.createClient (/home/sudeep/Documents/Web/Auth_Project/node_modules/mongoose/lib/drivers/node-mongodb-native/connection.js:206:11)\n    at NativeConnection.openUri (/home/sudeep/Documents/Web/Auth_Project/node_modules/mongoose/lib/connection.js:759:34)\n    at Mongoose.connect (/home/sudeep/Documents/Web/Auth_Project/node_modules/mongoose/lib/mongoose.js:402:15)\n    at module.exports (/home/sudeep/Documents/Web/Auth_Project/sources/database.js:5:14)\n    at Object.<anonymous> (/home/sudeep/Documents/Web/Auth_Project/index.js:17:30)\n    at Module._compile (node:internal/modules/cjs/loader:1241:14)\n    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)\n    at Module.load (node:internal/modules/cjs/loader:1091:32)\n    at Module._load (node:internal/modules/cjs/loader:938:12)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:83:12)"}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"error","message":"Failed to connect to DB --- The `uri` parameter to `openUri()` must be a string, got \"undefined\". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.","stack":"MongooseError: The `uri` parameter to `openUri()` must be a string, got \"undefined\". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.\n    at NativeConnection.createClient (/home/sudeep/Documents/Web/Auth_Project/node_modules/mongoose/lib/drivers/node-mongodb-native/connection.js:206:11)\n    at NativeConnection.openUri (/home/sudeep/Documents/Web/Auth_Project/node_modules/mongoose/lib/connection.js:759:34)\n    at Mongoose.connect (/home/sudeep/Documents/Web/Auth_Project/node_modules/mongoose/lib/mongoose.js:402:15)\n    at module.exports (/home/sudeep/Documents/Web/Auth_Project/sources/database.js:5:14)\n    at Object.<anonymous> (/home/sudeep/Documents/Web/Auth_Project/index.js:17:30)\n    at Module._compile (node:internal/modules/cjs/loader:1241:14)\n    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)\n    at Module.load (node:internal/modules/cjs/loader:1091:32)\n    at Module._load (node:internal/modules/cjs/loader:938:12)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:83:12)"}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"error","message":"Failed to connect to DB --- The `uri` parameter to `openUri()` must be a string, got \"undefined\". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.","stack":"MongooseError: The `uri` parameter to `openUri()` must be a string, got \"undefined\". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.\n    at NativeConnection.createClient (/home/sudeep/Documents/Web/Auth_Project/node_modules/mongoose/lib/drivers/node-mongodb-native/connection.js:206:11)\n    at NativeConnection.openUri (/home/sudeep/Documents/Web/Auth_Project/node_modules/mongoose/lib/connection.js:759:34)\n    at Mongoose.connect (/home/sudeep/Documents/Web/Auth_Project/node_modules/mongoose/lib/mongoose.js:402:15)\n    at module.exports (/home/sudeep/Documents/Web/Auth_Project/sources/database.js:5:14)\n    at Object.<anonymous> (/home/sudeep/Documents/Web/Auth_Project/index.js:17:30)\n    at Module._compile (node:internal/modules/cjs/loader:1241:14)\n    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)\n    at Module.load (node:internal/modules/cjs/loader:1091:32)\n    at Module._load (node:internal/modules/cjs/loader:938:12)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:83:12)"}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"error","message":"Failed to connect to DB --- The `uri` parameter to `openUri()` must be a string, got \"undefined\". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.","stack":"MongooseError: The `uri` parameter to `openUri()` must be a string, got \"undefined\". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.\n    at NativeConnection.createClient (/home/sudeep/Documents/Web/Auth_Project/node_modules/mongoose/lib/drivers/node-mongodb-native/connection.js:206:11)\n    at NativeConnection.openUri (/home/sudeep/Documents/Web/Auth_Project/node_modules/mongoose/lib/connection.js:759:34)\n    at Mongoose.connect (/home/sudeep/Documents/Web/Auth_Project/node_modules/mongoose/lib/mongoose.js:402:15)\n    at module.exports (/home/sudeep/Documents/Web/Auth_Project/sources/database.js:5:14)\n    at Object.<anonymous> (/home/sudeep/Documents/Web/Auth_Project/index.js:17:30)\n    at Module._compile (node:internal/modules/cjs/loader:1241:14)\n    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)\n    at Module.load (node:internal/modules/cjs/loader:1091:32)\n    at Module._load (node:internal/modules/cjs/loader:938:12)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:83:12)"}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"error","message":"Failed to connect to DB --- The `uri` parameter to `openUri()` must be a string, got \"undefined\". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.","stack":"MongooseError: The `uri` parameter to `openUri()` must be a string, got \"undefined\". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.\n    at NativeConnection.createClient (/home/sudeep/Documents/Web/Auth_Project/node_modules/mongoose/lib/drivers/node-mongodb-native/connection.js:206:11)\n    at NativeConnection.openUri (/home/sudeep/Documents/Web/Auth_Project/node_modules/mongoose/lib/connection.js:759:34)\n    at Mongoose.connect (/home/sudeep/Documents/Web/Auth_Project/node_modules/mongoose/lib/mongoose.js:402:15)\n    at module.exports (/home/sudeep/Documents/Web/Auth_Project/sources/database.js:5:14)\n    at Object.<anonymous> (/home/sudeep/Documents/Web/Auth_Project/index.js:17:30)\n    at Module._compile (node:internal/modules/cjs/loader:1241:14)\n    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)\n    at Module.load (node:internal/modules/cjs/loader:1091:32)\n    at Module._load (node:internal/modules/cjs/loader:938:12)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:83:12)"}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"error","message":"Failed to connect to DB --- The `uri` parameter to `openUri()` must be a string, got \"function\". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.","stack":"MongooseError: The `uri` parameter to `openUri()` must be a string, got \"function\". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.\n    at NativeConnection.createClient (/home/sudeep/Documents/Web/Auth_Project/node_modules/mongoose/lib/drivers/node-mongodb-native/connection.js:206:11)\n    at NativeConnection.openUri (/home/sudeep/Documents/Web/Auth_Project/node_modules/mongoose/lib/connection.js:759:34)\n    at Mongoose.connect (/home/sudeep/Documents/Web/Auth_Project/node_modules/mongoose/lib/mongoose.js:402:15)\n    at module.exports (/home/sudeep/Documents/Web/Auth_Project/sources/database.js:5:14)\n    at Object.<anonymous> (/home/sudeep/Documents/Web/Auth_Project/index.js:17:30)\n    at Module._compile (node:internal/modules/cjs/loader:1241:14)\n    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)\n    at Module.load (node:internal/modules/cjs/loader:1091:32)\n    at Module._load (node:internal/modules/cjs/loader:938:12)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:83:12)"}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"error","message":"Failed to connect to DB --- Invalid scheme, expected connection string to start with \"mongodb://\" or \"mongodb+srv://\"","stack":"MongoParseError: Invalid scheme, expected connection string to start with \"mongodb://\" or \"mongodb+srv://\"\n    at new ConnectionString (/home/sudeep/Documents/Web/Auth_Project/node_modules/mongoose/node_modules/mongodb-connection-string-url/lib/index.js:86:19)\n    at parseOptions (/home/sudeep/Documents/Web/Auth_Project/node_modules/mongoose/node_modules/mongodb/lib/connection_string.js:185:17)\n    at new MongoClient (/home/sudeep/Documents/Web/Auth_Project/node_modules/mongoose/node_modules/mongodb/lib/mongo_client.js:51:63)\n    at NativeConnection.createClient (/home/sudeep/Documents/Web/Auth_Project/node_modules/mongoose/lib/drivers/node-mongodb-native/connection.js:288:14)\n    at NativeConnection.openUri (/home/sudeep/Documents/Web/Auth_Project/node_modules/mongoose/lib/connection.js:759:34)\n    at Mongoose.connect (/home/sudeep/Documents/Web/Auth_Project/node_modules/mongoose/lib/mongoose.js:402:15)\n    at module.exports (/home/sudeep/Documents/Web/Auth_Project/sources/database.js:5:14)\n    at Object.<anonymous> (/home/sudeep/Documents/Web/Auth_Project/index.js:17:30)\n    at Module._compile (node:internal/modules/cjs/loader:1241:14)\n    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)"}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"error","message":"Failed to connect to DB --- Invalid scheme, expected connection string to start with \"mongodb://\" or \"mongodb+srv://\"","stack":"MongoParseError: Invalid scheme, expected connection string to start with \"mongodb://\" or \"mongodb+srv://\"\n    at new ConnectionString (/home/sudeep/Documents/Web/Auth_Project/node_modules/mongoose/node_modules/mongodb-connection-string-url/lib/index.js:86:19)\n    at parseOptions (/home/sudeep/Documents/Web/Auth_Project/node_modules/mongoose/node_modules/mongodb/lib/connection_string.js:185:17)\n    at new MongoClient (/home/sudeep/Documents/Web/Auth_Project/node_modules/mongoose/node_modules/mongodb/lib/mongo_client.js:51:63)\n    at NativeConnection.createClient (/home/sudeep/Documents/Web/Auth_Project/node_modules/mongoose/lib/drivers/node-mongodb-native/connection.js:288:14)\n    at NativeConnection.openUri (/home/sudeep/Documents/Web/Auth_Project/node_modules/mongoose/lib/connection.js:759:34)\n    at Mongoose.connect (/home/sudeep/Documents/Web/Auth_Project/node_modules/mongoose/lib/mongoose.js:402:15)\n    at module.exports (/home/sudeep/Documents/Web/Auth_Project/sources/database.js:5:14)\n    at Object.<anonymous> (/home/sudeep/Documents/Web/Auth_Project/index.js:17:30)\n    at Module._compile (node:internal/modules/cjs/loader:1241:14)\n    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)"}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"error","message":"Failed to connect to DB --- Invalid scheme, expected connection string to start with \"mongodb://\" or \"mongodb+srv://\"","stack":"MongoParseError: Invalid scheme, expected connection string to start with \"mongodb://\" or \"mongodb+srv://\"\n    at new ConnectionString (/home/sudeep/Documents/Web/Auth_Project/node_modules/mongoose/node_modules/mongodb-connection-string-url/lib/index.js:86:19)\n    at parseOptions (/home/sudeep/Documents/Web/Auth_Project/node_modules/mongoose/node_modules/mongodb/lib/connection_string.js:185:17)\n    at new MongoClient (/home/sudeep/Documents/Web/Auth_Project/node_modules/mongoose/node_modules/mongodb/lib/mongo_client.js:51:63)\n    at NativeConnection.createClient (/home/sudeep/Documents/Web/Auth_Project/node_modules/mongoose/lib/drivers/node-mongodb-native/connection.js:288:14)\n    at NativeConnection.openUri (/home/sudeep/Documents/Web/Auth_Project/node_modules/mongoose/lib/connection.js:759:34)\n    at Mongoose.connect (/home/sudeep/Documents/Web/Auth_Project/node_modules/mongoose/lib/mongoose.js:402:15)\n    at module.exports (/home/sudeep/Documents/Web/Auth_Project/sources/database.js:5:14)\n    at Object.<anonymous> (/home/sudeep/Documents/Web/Auth_Project/index.js:17:30)\n    at Module._compile (node:internal/modules/cjs/loader:1241:14)\n    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)"}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"error","message":"Failed to connect to DB --- Invalid scheme, expected connection string to start with \"mongodb://\" or \"mongodb+srv://\"","stack":"MongoParseError: Invalid scheme, expected connection string to start with \"mongodb://\" or \"mongodb+srv://\"\n    at new ConnectionString (/home/sudeep/Documents/Web/Auth_Project/node_modules/mongoose/node_modules/mongodb-connection-string-url/lib/index.js:86:19)\n    at parseOptions (/home/sudeep/Documents/Web/Auth_Project/node_modules/mongoose/node_modules/mongodb/lib/connection_string.js:185:17)\n    at new MongoClient (/home/sudeep/Documents/Web/Auth_Project/node_modules/mongoose/node_modules/mongodb/lib/mongo_client.js:51:63)\n    at NativeConnection.createClient (/home/sudeep/Documents/Web/Auth_Project/node_modules/mongoose/lib/drivers/node-mongodb-native/connection.js:288:14)\n    at NativeConnection.openUri (/home/sudeep/Documents/Web/Auth_Project/node_modules/mongoose/lib/connection.js:759:34)\n    at Mongoose.connect (/home/sudeep/Documents/Web/Auth_Project/node_modules/mongoose/lib/mongoose.js:402:15)\n    at module.exports (/home/sudeep/Documents/Web/Auth_Project/sources/database.js:5:14)\n    at Object.<anonymous> (/home/sudeep/Documents/Web/Auth_Project/index.js:17:30)\n    at Module._compile (node:internal/modules/cjs/loader:1241:14)\n    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)"}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"error","message":"Unhandled Rejection :  winston.error is not a function","stack":"TypeError: winston.error is not a function\n    at /home/sudeep/Documents/Web/Auth_Project/routes/login.js:33:17"}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"error","message":"Unhandled Rejection :  winston.error is not a function","stack":"TypeError: winston.error is not a function\n    at /home/sudeep/Documents/Web/Auth_Project/routes/login.js:33:17"}
+{"level":"error","message":"Unhandled Rejection :  winston.error is not a function","stack":"TypeError: winston.error is not a function\n    at /home/sudeep/Documents/Web/Auth_Project/routes/login.js:33:17"}
+{"level":"error","message":"Unhandled Rejection :  winston.error is not a function","stack":"TypeError: winston.error is not a function\n    at /home/sudeep/Documents/Web/Auth_Project/routes/login.js:33:17"}
+{"level":"error","message":"Unhandled Rejection :  winston.error is not a function","stack":"TypeError: winston.error is not a function\n    at /home/sudeep/Documents/Web/Auth_Project/routes/login.js:33:17"}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"error","message":"Unhandled Rejection :  winston.error is not a function","stack":"TypeError: winston.error is not a function\n    at /home/sudeep/Documents/Web/Auth_Project/routes/login.js:33:17"}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}
+{"level":"error","message":"Unhandled Rejection :  winston.error is not a function","stack":"TypeError: winston.error is not a function\n    at /home/sudeep/Documents/Web/Auth_Project/routes/login.js:33:17"}
+{"level":"info","message":"listening to port 3000....."}
+{"level":"info","message":"Successfully connected to mongoDB ...."}

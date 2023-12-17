@@ -6,10 +6,12 @@ require('express-async-errors');
 module.exports = function(){
     process.on('uncaughtException', ()=>{
         winston.error("Uncaught Exception : ", ex);
+        process.exit(1);
     });
     
     process.on('unhandledRejection', (reason)=>{
         winston.error("Unhandled Rejection : ", reason);
+        process.exit(1);
     });
 
     winston.add(new winston.transports.Console({colorize: true, format:winston.format.simple()}));

@@ -42,24 +42,19 @@
           </li>
         </ul>
         <div class="form-inline my-2 my-lg-0">
-          <a href="/login"
-            ><button class="btn btn-primary my-2 my-sm-0 mx-2" type="submit">
-              Login
-            </button></a
-          >
-          <a href="/signup"
-            ><button class="btn btn-primary my-2 my-sm-0 mx-2" type="submit">
-              SignUp
-            </button></a
+          <a href="/home"
+            ><button class="btn btn-primary my-2 my-sm-0 mx-2" type="submit" onclick="logoutUser()">
+              LogOut
+            </button></a>
           >
         </div>
       </div>
     </nav>
     <!--================================================ nav end ========================================================== -->
-    <div class="container">
+    <div  class="container">
       <h1 class="my-4">Add a blog</h1>
 
-      <form action="addblog" method="post" id="newBlog">
+      <form action="/add-blog" method="post" id="newBlog">
         <div class="form-group mb-3">
           <label for="title">Title</label>
           <input
@@ -81,130 +76,221 @@
             placeholder="Describe your blog ....."
           ></textarea>
         </div>
-        <button type="submit" id="submit" class="btn btn-primary">
+        <button
+          type="submit"
+          id="submit"
+          class="btn btn-primary">
           Submit
         </button>
       </form>
-    <!--========================================================================================================== -->
+      <!--========================================================================================================== -->
 
       <h1 class="text-center my-4">Your Blogs</h1>
 
-      <div class="mynotes my-2 row">
-        <div class="card mx-4 my-2" style="width: 18rem">
+      <div id="blog-container" class="row">
+        <div class="card row mx-4 my-2"   style="width: 18rem">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+            <h4 class="card-title">My First Blog</h4>
             <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+              Hello everyone this is my first blog. I am Sudeep Bogati from
+              Kathmandu . Currently I 'm persuing my graduation in BIT and am a
+              extreme machine learning enthusiast.
             </p>
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
-          </div>
-        </div>
-        <div class="card mx-4 my-2" style="width: 18rem">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-            <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
-          </div>
-        </div>
-        <div class="card mx-4 my-2" style="width: 18rem">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-            <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
-          </div>
-        </div>
-        <div class="card mx-4 my-2" style="width: 18rem">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-            <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
-          </div>
-        </div>
-        <div class="card mx-4 my-2" style="width: 18rem">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-            <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
-          </div>
-        </div>
-        <div class="card mx-4 my-2" style="width: 18rem">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-            <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
           </div>
         </div>
       </div>
-    </div>
+      
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.9/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
     <!-- ------------------------- My Script ------------------------------------- -->
 
-    <script>
-      document
-        .getElementById("newBlog")
-        .addEventListener("submit", async function (event) {
-          event.preventDefault();
-          const token = localStorage.getItem('token');
-          if(!token){
-            alert("Please login first! ");
-            return;
-          }
-          const data = {
-            title: document.getElementById("title").value,
-            desc: document.getElementById("desc").value
-          };
+   <!-- Add these scripts at the end of your HTML body -->
 
-          try {
-            const response = await fetch("/add-blog", {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-                "token" : token
-              },
-              body: JSON.stringify(data),
-            });
-            const result = await response.json();
-            console.log(result);
-            if (response.ok) {
-              alert(`added a new blog`);
-              // window.location.href = `/home?username=${result.username}&email=${result.email}`;
-            } else alert(`Error: ${result.error}`);
-          } catch (err) {
-            console.log(err);
-            alert("Internal Error , Please try again letter ...");
-          }
-        });
-    </script>
+<!-- Fetch and display existing blog posts when the page loads -->
+<!-- Add these scripts at the end of your HTML body -->
+
+<!-- Fetch and display existing blog posts when the page loads -->
+<script>
+  document.addEventListener("DOMContentLoaded", async () => {
+    const token = localStorage.getItem("token")
+    if(!token){
+      window.location.href = '/blogs';
+    }
+    // console.log(token);
+    try {
+      const response = await fetch("/add-blog", {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          'Accept': 'application/json',
+          "Authorization": token
+        },
+      });
+      const result = await response.json();
+      // console.log(result);
+      // Display existing blog posts
+      const blogListContainer = document.getElementById("blog-container");
+      updateBlogList(result.blogPosts, blogListContainer);
+    } catch (error) {
+      console.log("Error fetching blog posts:", error);
+    }
+  });
+
+  // Function to update the blog list in the HTML
+  function updateBlogList(blogPosts, container) {
+    // Clear the existing content
+    container.innerHTML = "";
+
+    // Check if there are any blog posts
+    if (blogPosts && blogPosts.length > 0) {
+      // Loop through the blog posts  and create HTML elements
+      blogPosts.forEach(blog => {
+
+         const card = document.createElement("div");
+        card.className = "card mx-4 d-flex my-2 row";
+        card.style.width = "18rem";
+
+        const cardBody = document.createElement("div");
+        cardBody.className = "card-body";
+
+        const title = document.createElement("h4");
+        title.className = "card-title";
+        title.innerText = blog.title;
+
+        const desc = document.createElement("p");
+        desc.className = "card-text";
+        desc.innerText = blog.desc;
+
+        // Append elements to the card body
+        cardBody.appendChild(title);
+        cardBody.appendChild(desc);
+
+        // Append the card body to the card
+        card.appendChild(cardBody);
+
+        // Append the card to the blog list container
+        container.appendChild(card);
+      });
+    } else {
+      // Display a message if there are no blog posts
+      container.innerHTML = "<p>No blog posts available. Login to add new.</p>";
+    }
+  }
+
+  // Event listener for the new blog form
+  const blogForm = document.getElementById("newBlog");
+  blogForm.addEventListener("submit", async function (event) {
+    event.preventDefault();
+    const title = document.getElementById("title").value;
+    const desc = document.getElementById("desc").value;
+
+    if (!title || !desc) {
+      alert("Title and description are required!");
+      return;
+    }
+
+    const token = localStorage.getItem("token");
+    if (!token) {
+      alert("Please login first!");
+      window.location.href = 'blogs';
+    }
+
+    const data = { title, desc };
+
+    try {
+      const response = await fetch("/add-blog", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          'Accept': 'application/json',
+          "Authorization": token,
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+      // console.log(result);
+      if (response.ok) {
+        alert("Added a new blog");
+        // Clear the form fields
+        document.getElementById("title").value = "";
+        document.getElementById("desc").value = "";
+
+        // Add the new blog dynamically
+        addBlog(result.blog);
+      } else {
+        alert(`Error: ${result.error}`);
+      }
+    } catch (err) {
+      console.log(err);
+      alert("Internal Error, Please try again later...");
+    }
+  });
+
+  // Function to add a new blog dynamically
+  function addBlog(blog) {
+    const container = document.getElementById("blog-container");
+
+    const card = document.createElement("div");
+    card.className = "card  d-flex mx-4 my-2";
+    card.style.width = "18rem";
+
+    const cardBody = document.createElement("div");
+    cardBody.className = "card-body";
+
+    const title = document.createElement("h4");
+    title.className = "card-title";
+    title.innerText = blog.title;
+
+    const desc = document.createElement("p");
+    desc.className = "card-text";
+    desc.innerText = blog.desc;
+
+    // Append elements to the card body
+    cardBody.appendChild(title);
+    cardBody.appendChild(desc);
+
+    // Append the card body to the card
+    card.appendChild(cardBody);
+
+    // Append the card to the blog list container
+    container.appendChild(card);
+  }
+
+
+
+
+
+  // ===================log out ==========================================
+  async function logoutUser() {
+    try {
+      const response = await fetch("/logout", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": localStorage.getItem("token"),
+        },
+      });
+
+      const result = await response.json();
+      if (response.ok) {
+        // Clear the token on the client side
+        localStorage.removeItem("token");
+        // Redirect to the home page or perform any other action
+        window.location.href = "/blogs";
+        alert("Successfully loggedOut !! ");
+      } else {
+        console.log(`Error: ${result.error}`);
+        alert(result.error);
+      }
+    } catch (error) {
+      console.log("Error during logout:", error);
+    }
+  }
+</script>
+
+
   </body>
 </html>

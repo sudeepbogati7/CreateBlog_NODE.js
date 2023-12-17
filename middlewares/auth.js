@@ -3,11 +3,10 @@ const config = require('config');
 
 const verifyToken = (req, res, next) => {
     const token = req.get("Authorization");
-    console.log(token);
+    // console.log(token);
     try{
         if(!token) {
-            // console.log(token);
-            return res.status(401).json({error : "Access denied. Please Login first ! "});
+            return res.status(401).json({error : "Access denied. Please Login first!" , message: "Invalid token"});
         }
         const decoded = jwt.verify(token , config.get('JWT_SECRET'));
         req.user = decoded;

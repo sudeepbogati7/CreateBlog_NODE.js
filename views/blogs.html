@@ -59,7 +59,7 @@
     <div  class="container">
       <h1 class="my-4">Add a blog</h1>
 
-      <form action="/add-blog" method="post" id="newBlog">
+      <form action="blogs" id="newBlog">
         <div class="form-group mb-3">
           <label for="title">Title</label>
           <input
@@ -95,16 +95,12 @@
       <div id="blog-container" class="row">
         <div class="card row mx-4 my-2"   style="width: 18rem">
           <div class="card-body">
-            <h4 class="card-title">My First Blog</h4>
             <p class="card-text">
-              Hello everyone this is my first blog. I am Sudeep Bogati from
-              Kathmandu . Currently I 'm persuing my graduation in BIT and am a
-              extreme machine learning enthusiast.
+              You are not loggedIn ! <br> You have to loginIn to view and add blogs........
             </p>
           </div>
         </div>
       </div>
-      
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.9/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
@@ -118,146 +114,10 @@
 
 <!-- Fetch and display existing blog posts when the page loads -->
 <script>
-  document.addEventListener("DOMContentLoaded", async () => {
-    try {
-      const response = await fetch("/add-blog", {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-          'Accept': 'application/json',
-          "Authorization": localStorage.getItem("token"),
-        },
-      });
-      const result = await response.json();
-      // console.log(result);
-      // Display existing blog posts
-      const blogListContainer = document.getElementById("blog-container");
-      updateBlogList(result.blogPosts, blogListContainer);
-    } catch (error) {
-      console.log("Error fetching blog posts:", error);
-    }
-  });
-
-  // Function to update the blog list in the HTML
-  function updateBlogList(blogPosts, container) {
-    // Clear the existing content
-    container.innerHTML = "";
-
-    // Check if there are any blog posts
-    if (blogPosts && blogPosts.length > 0) {
-      // Loop through the blog posts  and create HTML elements
-      blogPosts.forEach(blog => {
-
-         const card = document.createElement("div");
-        card.className = "card mx-4 d-flex my-2 row";
-        card.style.width = "18rem";
-
-        const cardBody = document.createElement("div");
-        cardBody.className = "card-body";
-
-        const title = document.createElement("h4");
-        title.className = "card-title";
-        title.innerText = blog.title;
-
-        const desc = document.createElement("p");
-        desc.className = "card-text";
-        desc.innerText = blog.desc;
-
-        // Append elements to the card body
-        cardBody.appendChild(title);
-        cardBody.appendChild(desc);
-
-        // Append the card body to the card
-        card.appendChild(cardBody);
-
-        // Append the card to the blog list container
-        container.appendChild(card);
-      });
-    } else {
-      // Display a message if there are no blog posts
-      container.innerHTML = "<p>No blog posts available. Login to add new.</p>";
-    }
-  }
-
-  // Event listener for the new blog form
   const blogForm = document.getElementById("newBlog");
-  blogForm.addEventListener("submit", async function (event) {
-    event.preventDefault();
-    const title = document.getElementById("title").value;
-    const desc = document.getElementById("desc").value;
-
-    if (!title || !desc) {
-      alert("Title and description are required!");
-      return;
-    }
-
-    const token = localStorage.getItem("token");
-    if (!token) {
-      alert("Please login first!");
-      return;
-    }
-
-    const data = { title, desc };
-
-    try {
-      const response = await fetch("/add-blog", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          'Accept': 'application/json',
-          "Authorization": token,
-        },
-        body: JSON.stringify(data),
-      });
-
-      const result = await response.json();
-      // console.log(result);
-      if (response.ok) {
-        alert("Added a new blog");
-        // Clear the form fields
-        document.getElementById("title").value = "";
-        document.getElementById("desc").value = "";
-
-        // Add the new blog dynamically
-        addBlog(result.blog);
-      } else {
-        alert(`Error: ${result.error}`);
-      }
-    } catch (err) {
-      console.log(err);
-      alert("Internal Error, Please try again later...");
-    }
-  });
-
-  // Function to add a new blog dynamically
-  function addBlog(blog) {
-    const container = document.getElementById("blog-container");
-
-    const card = document.createElement("div");
-    card.className = "card  d-flex mx-4 my-2";
-    card.style.width = "18rem";
-
-    const cardBody = document.createElement("div");
-    cardBody.className = "card-body";
-
-    const title = document.createElement("h4");
-    title.className = "card-title";
-    title.innerText = blog.title;
-
-    const desc = document.createElement("p");
-    desc.className = "card-text";
-    desc.innerText = blog.desc;
-
-    // Append elements to the card body
-    cardBody.appendChild(title);
-    cardBody.appendChild(desc);
-
-    // Append the card body to the card
-    card.appendChild(cardBody);
-
-    // Append the card to the blog list container
-    container.appendChild(card);
-  }
+  blogForm.addEventListener("submit", function (event) {
+    alert("Please login first ! ");
+  });  
 </script>
 
 

@@ -36,7 +36,14 @@ app.use('/', blogsRoute);
 const varifyToken = require('./middlewares/auth');
 app.use('/',varifyToken);
 
+//logout api
+const logOut = require('./routes/logout');
+app.use('/',logOut);
+
+
 require('./prod')(app); // production middlewares
+
+
 
 
 
