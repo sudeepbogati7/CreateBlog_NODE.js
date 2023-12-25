@@ -1,6 +1,23 @@
 # Create your Blog 
 
-## Still sacaling the project ....
+
+Tools / modules used : `NODE.js` , `Express.js`, `MongoDB`, [`JWT`, `Joi`, `Winston` , `Bycript`............]
+
+
+1.Clone github repo :
+$``` git clone https://github.com/sudeepbogati7/CreateBlog_NODE.js ```
+
+2. Install dependencies :
+3. ```nvm install 20.9.0```,
+```vnm use 20.9.0```,
+```npm install```
+
+4. Start the project :
+   ```npm start```
+
+
+
+
 
 **Here are some screenshots , and will deploy soon ;)** <br>
 Set the env variable : 
