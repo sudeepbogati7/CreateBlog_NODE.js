@@ -3,7 +3,7 @@ const app = express();
 const winston = require('winston');
 const path = require('path');
 const port = 3000;
-
+const config = require('config');
 
 app.use(express.json());
 app.engine('html', require('ejs').renderFile );
@@ -44,7 +44,9 @@ app.use('/',logOut);
 require('./prod')(app); // production middlewares
 
 
-
+if(!config.get("JWT_SECRET")){
+    throw new Error("FATAL ERROR : The environment variable is not defined ! ");
+}
 
 
 require('./sources/log_file')(); //logger.log
