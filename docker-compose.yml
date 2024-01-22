@@ -6,7 +6,11 @@ services:
     ports:
       - 3000:3000
     environment: 
-      DB_URL : mongodb://localhost:27017/quotes
+      DB_URL : mongodb://db/quotes
+    volumes :
+      - .:/app
+    
+    
   database:
     image: mongo:4.0.28-xenial
     ports:
