@@ -1,4 +1,0 @@
-{
-    "JWT_SECRET" : "",
-    "db" : "mongodb://localhost:27017/quotes"
-}

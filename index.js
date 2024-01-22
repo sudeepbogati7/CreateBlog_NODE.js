@@ -14,42 +14,42 @@ app.use(express.urlencoded({extended:true}));
 
 
 //databse 
-require('./src/database')();
+require('./config/database')();
 
 //routes 
-require('./routes/user')(app); //user-routes
+require('./src/routes/user')(app); //user-routes
 
 //login-route
-const loginRoute = require('./routes/login');
+const loginRoute = require('./src/routes/login');
 app.use('/', loginRoute);
 
 //signup route 
-const signupRoute = require('./routes/signup');
+const signupRoute = require('./src/routes/signup');
 app.use('/',signupRoute);
 
 //blogs-route
-const blogsRoute = require('./routes/blog');
+const blogsRoute = require('./src/routes/blog');
 app.use('/', blogsRoute);
 
 
 //authentication token varify(middleware)
-const varifyToken = require('./middlewares/auth');
+const varifyToken = require('./src/middlewares/auth');
 app.use('/',varifyToken);
 
-	//logout api
-const logOut = require('./routes/logout');
+//logout api
+const logOut = require('./src/routes/logout');
 app.use('/',logOut);
 
 
 require('./prod')(app); // production middlewares
 
 
-if(!config.get("JWT_SECRET")){
-    throw new Error("FATAL ERROR : The environment variable is not defined ! ");
-}
+// if(!config.get("JWT_SECRET")){
+//     throw new Error("FATAL ERROR : The environment variable is not defined ! ");
+// }
 
 
-require('./src/log_file')(); //logger.log
+require('./config/log_file')(); //logger.log
 app.listen(port, ()=>{
     winston.info(`listening to port ${port}.....`);
 })

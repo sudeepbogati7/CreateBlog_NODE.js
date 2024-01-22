@@ -1,0 +1,18 @@
+version: '2.24.1'
+
+services:
+  backend : 
+    build : .
+    ports:
+      - 3000:3000
+    environment: 
+      DB_URL : mongodb://localhost:27017/quotes
+  database:
+    image: mongo:4.0.28-xenial
+    ports:
+      - 27017:27017
+    volumes:
+      - quotes:/data/db
+
+volumes:
+  quotes : 
