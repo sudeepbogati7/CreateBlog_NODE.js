@@ -14,7 +14,7 @@ app.use(express.urlencoded({extended:true}));
 
 
 //databse 
-require('./sources/database')();
+require('./src/database')();
 
 //routes 
 require('./routes/user')(app); //user-routes
@@ -36,7 +36,7 @@ app.use('/', blogsRoute);
 const varifyToken = require('./middlewares/auth');
 app.use('/',varifyToken);
 
-//logout api
+	//logout api
 const logOut = require('./routes/logout');
 app.use('/',logOut);
 
@@ -49,7 +49,7 @@ if(!config.get("JWT_SECRET")){
 }
 
 
-require('./sources/log_file')(); //logger.log
+require('./src/log_file')(); //logger.log
 app.listen(port, ()=>{
     winston.info(`listening to port ${port}.....`);
 })
