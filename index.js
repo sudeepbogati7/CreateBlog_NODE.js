@@ -50,6 +50,8 @@ require('./prod')(app); // production middlewares
 
 
 require('./config/log_file')(); //logger.log
-app.listen(port, ()=>{
+const server = app.listen(port, ()=>{
     winston.info(`listening to port ${port}.....`);
 })
+
+module.exports = server; 
