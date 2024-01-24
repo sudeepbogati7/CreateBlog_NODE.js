@@ -15,10 +15,6 @@ $``` git clone https://github.com/sudeepbogati7/CreateBlog_NODE.js ```
 4. Start the project :
    ```npm start```
 
-
-
-
-
 **Here are some screenshots , and will deploy soon ;)** <br>
 Set the env variable : 
 ![image](https://github.com/sudeepbogati7/CreateBlog_NODE.js/assets/106460936/d460280c-305d-4047-9df8-347fd23c8b7a)
