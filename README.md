@@ -33,6 +33,8 @@ validation using Joi :<br>
 ![image](https://github.com/sudeepbogati7/CreateBlog_NODE.js/assets/106460936/57bbc81a-1c10-491e-bafa-d6e0c95ed886)
 
 
+
+
 After successful registration , you'll be redirected to the inital page where you can now post the new blogs .<br>
 ![image](https://github.com/sudeepbogati7/CreateBlog_NODE.js/assets/106460936/faf20618-d922-4cb3-9d83-9419d0f74289)
 
